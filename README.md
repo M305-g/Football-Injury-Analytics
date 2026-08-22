@@ -17,9 +17,7 @@ The project therefore demonstrates that injury burden should not be evaluated so
 
 ## Impact of the Project
 
-This project contributes a practical **football injury intelligence framework** for translating injury data into information that can support medical, performance, and coaching decisions.
-
-Rather than treating all injuries as equivalent, the project evaluates injury burden through multiple dimensions, including injury frequency, days missed, games missed, player availability, performance outcomes, and playing position. This provides a broader view of how injuries may influence competitive resources and squad availability.
+The project's core contribution is a burden-classification framework (Low/Moderate/High/Very High) that lets medical and performance staff triage players by cumulative absence risk rather than reacting to individual injury events one at a time. This reframes injury management from incident-tracking to portfolio-risk management across a squad.
 
 ### What I Have Contributed to This Project
 
@@ -68,6 +66,8 @@ Responsible for player availability monitoring, workload management, performance
 Responsible for squad selection, rotation, workload decisions, tactical planning, and interpreting player performance in the context of availability and injury burden.
 
 ## Dataset Overview
+
+The datasets do not specify a single competition; they aggregate player records across multiple professional leagues and seasons rather than one national league or tournament.
 
 The project uses three complementary datasets.
 
@@ -279,7 +279,7 @@ The main exploratory relationships were:
 
 **Statistical status:** Correlation analysis confirmed the direction and strength of these observed associations.
 
-**Insight:** Greater injury burden is associated with reduced match participation, with the relationship more apparent for appearances than aggregate minutes played.
+**Insight:** Greater injury burden shows a weak-to-moderate negative association with appearances (r ≈ −0.30) and a negligible association with total minutes played (r ≈ −0.10). This suggests injury burden more strongly predicts whether a player is selected than how much they play once selected — a distinction relevant for squad rotation versus starting-XI decisions.
 
 ### EDA 5 — Injury Burden and Competitive Performance
 
@@ -377,12 +377,7 @@ Because the outcome distributions and group structures did not justify reliance 
 
 **Injury burden vs performance**
 
-Kruskal–Wallis testing showed significant overall differences between injury-burden groups for:
-
-* Appearances — **H = 9090, p < 0.001**
-* Minutes played — **H = 1406.57, p < 0.001**
-* Goals — **H = 1094.6, p < 0.001**
-* Assists — **H = 1342.5, p < 0.001**
+Kruskal–Wallis testing showed significant overall differences between injury-burden groups for appearances (H = 9090), minutes played (H = 1406.57), goals (H = 1094.6), and assists (H = 1342.5), all p < 0.001. Given the large sample size (n = 93,194 player-seasons), statistical significance was expected even for modest effects; effect sizes (epsilon-squared) should be calculated in future iterations to determine practical magnitude alongside statistical significance.
 
 **Position vs injury duration**
 
@@ -554,6 +549,8 @@ Fourth, the statistical analyses establish **associations and group differences 
 Fifth, the analysis did not constitute a true longitudinal pre-injury versus post-injury performance study. The available results primarily examine injury burden, player availability, positional differences, and performance differences across groups.
 
 Sixth, player performance can be influenced by many factors not captured in the available datasets, including tactical role, team quality, competition level, playing time opportunity, transfers, coaching changes, and workload exposure.
+
+Seventh, position categories were limited to four broad groups (Goalkeeper, Defender, Midfield, Attack). This masks meaningful sub-positional variation (e.g., full-back vs. center-back, winger vs. striker) that likely carries distinct injury and performance profiles.
 
 Finally, the post-hoc pairwise statistical outputs were not retained as confirmatory evidence because their execution produced unreliable/duplicated results. Therefore, the portfolio reports the robust **overall Kruskal–Wallis findings** rather than making unsupported claims about specific group pairs.
 
