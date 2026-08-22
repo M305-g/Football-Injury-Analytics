@@ -400,57 +400,39 @@ Importantly, statistical significance is interpreted as evidence of an associati
 
 ## Tableau Dashboards & Visualizations
 
-The Tableau component translates the analytical findings into an interactive decision-support environment.
+The Tableau component translates selected analytical findings into interactive visualizations that support evidence-based decision-making across medical, performance, and coaching contexts.
 
-### Dashboard 1 — Injury Burden & Player Availability
+**Dashboard 1 — Injury Burden & Competitive Impact**
 
-This dashboard focuses on the scale of injury burden and its relationship with player availability.
-
-Key visualizations:
-
-* Injury records by season
-* Top injury reasons by total days missed
-* Injury-burden distribution
-* Days missed vs appearances
-* Games missed vs appearances
-* Key injury-burden indicators
-
-**Primary stakeholders:** Medical Staff and Performance Staff.
-
-### Dashboard 2 — Injury Burden & Player Performance
-
-This dashboard focuses on the statistically supported relationship between injury burden and performance.
+This dashboard provides an overview of the scale, distribution, and competitive impact of player injuries.
 
 Key visualizations:
 
-* Injury burden vs appearances
-* Injury burden vs minutes played
-* Injury burden vs goals
-* Injury burden vs assists
+Injury Records by Season — shows how injury records are distributed across seasons.
+Total Days Missed by Injury Reason — identifies injury reasons associated with the greatest cumulative loss of playing time.
+Games Missed by Injury Reason — highlights injury reasons associated with the greatest number of missed games.
 
-These visualizations directly represent the statistically significant Kruskal–Wallis findings from EDA 5.
+Primary stakeholders: Medical Staff and Performance Staff.
 
-**Primary stakeholders:** Performance Staff and Head Coach.
+**Dashboard 2 — Injury Burden & Player Performance**
 
-### Dashboard 3 — Position, Injury & Performance Profile
+This dashboard was intended to visualize the relationship between injury burden and player performance, particularly appearances, minutes played, goals, and assists.
 
-This dashboard examines how playing position relates to both injury duration and performance.
+However, these performance visualizations were not included in the final Tableau implementation because the Tableau-ready performance file available for visualization did not contain all the required performance variables used during the EDA and statistical analysis.
 
-Key visualizations:
+Primary stakeholders: Performance Staff and Head Coach.
 
-* Position vs days missed
-* Position vs appearances
-* Position vs minutes played
-* Position vs goals
-* Position vs assists
+**Dashboard 3 — Positional Injury Profile**
 
-These visualizations reflect the statistically significant positional differences identified in EDA 6 and EDA 7.
+This dashboard examines differences in injury burden across playing positions.
 
-**Primary stakeholders:** Medical Staff, Performance Staff, and Head Coach.
+Key visualization:
 
-Together, the dashboards follow the analytical pathway:
+Total Days Missed by Playing Position — compares cumulative injury-related days missed across defenders, midfielders, attackers, and goalkeepers.
 
-**Injury Burden → Player Availability → Performance → Position-Specific Decision-Making**
+This visualization reflects the statistically significant positional difference in days missed identified through the Kruskal–Wallis analysis.
+
+Primary stakeholders: Medical Staff, Performance Staff, and Head Coach.
 
 ## Key Findings & Insights
 
@@ -552,6 +534,10 @@ Sixth, player performance can be influenced by many factors not captured in the 
 
 Seventh, position categories were limited to four broad groups (Goalkeeper, Defender, Midfield, Attack). This masks meaningful sub-positional variation (e.g., full-back vs. center-back, winger vs. striker) that likely carries distinct injury and performance profiles.
 
+Eighth, Some planned visualizations were intentionally not included rather than being recreated using different or incomplete variables. The EDA and statistical analyses were conducted at specific analytical levels, including player-season level, and some variables used in those analyses—such as injury-burden categories, appearances, minutes played, goals, and assists—were not available in the Tableau-ready datasets in the required form.
+
+Therefore, these visualizations were excluded to maintain data integrity, analytical consistency, and reproducibility. The corresponding statistical findings remain documented in the EDA and Statistical Analysis sections of this project.
+
 Finally, the post-hoc pairwise statistical outputs were not retained as confirmatory evidence because their execution produced unreliable/duplicated results. Therefore, the portfolio reports the robust **overall Kruskal–Wallis findings** rather than making unsupported claims about specific group pairs.
 
 ## Future Improvements / Next Steps
@@ -598,3 +584,16 @@ Football Performance Analytics
 
 mwanahamis050@gmail.com
 
+Tableau Dashboard 1
+
+
+https://public.tableau.com/app/profile/mwanahamisi.juma/viz/InjuryBurdenandPlayerPerfomance/InjuryBurdenandPlayerPerformance?publish=yes
+
+Tableau Dashboard 2
+
+
+https://public.tableau.com/app/profile/mwanahamisi.juma/viz/InjuryBurdenandPlayerPerfomance/InjuryBurdenandCompetitiveImpact?publish=yes
+
+Linkedin 
+
+www.linkedin.com/in/mwanahamisi-juma-00576b394
